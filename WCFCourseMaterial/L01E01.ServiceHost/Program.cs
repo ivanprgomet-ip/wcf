@@ -20,7 +20,6 @@ namespace L01E01.ServiceHost
             Console.WriteLine("Enter lastname: ");
             current.Lastname = Console.ReadLine();
 
-            Console.WriteLine("working");
             Console.WriteLine(service.Greet(current));
 
             Console.ReadKey();
