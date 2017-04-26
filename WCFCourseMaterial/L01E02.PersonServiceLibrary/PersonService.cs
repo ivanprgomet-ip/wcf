@@ -44,7 +44,7 @@ namespace L01E02.PersonServiceLibrary
 
         public string GetAddress()
         {
-            return Person.Address;
+            return "Street: "+Person.Address+", Phone: "+Person.Phone;
         }
 
         public string GetFullname()
