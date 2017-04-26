@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L01E02.PersonServiceHost", 
 		{25F79633-38DB-4B7B-A70D-DB678584FF64} = {25F79633-38DB-4B7B-A70D-DB678584FF64}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L01E02.WinFormPersonServiceHost", "L01E02.WinFormPersonServiceHost\L01E02.WinFormPersonServiceHost.csproj", "{241F7B2D-0BEB-4C76-855E-92C8A1EC2CDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{25F79633-38DB-4B7B-A70D-DB678584FF64} = {25F79633-38DB-4B7B-A70D-DB678584FF64}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +44,10 @@ Global
 		{67DF0372-1D1E-439A-9F72-FA50F76D3AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67DF0372-1D1E-439A-9F72-FA50F76D3AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67DF0372-1D1E-439A-9F72-FA50F76D3AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{241F7B2D-0BEB-4C76-855E-92C8A1EC2CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{241F7B2D-0BEB-4C76-855E-92C8A1EC2CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{241F7B2D-0BEB-4C76-855E-92C8A1EC2CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{241F7B2D-0BEB-4C76-855E-92C8A1EC2CDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
