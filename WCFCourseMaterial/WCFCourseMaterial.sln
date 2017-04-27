@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L01E02.WinFormPersonService
 		{25F79633-38DB-4B7B-A70D-DB678584FF64} = {25F79633-38DB-4B7B-A70D-DB678584FF64}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L02E01.EvalServiceLibrary", "L02E01.EvalServiceLibrary\L02E01.EvalServiceLibrary.csproj", "{E5D75E87-C878-4485-8FC5-E4BD7A2F0BBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{97D15A90-26B4-4C68-B501-5A43166367E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D15A90-26B4-4C68-B501-5A43166367E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D15A90-26B4-4C68-B501-5A43166367E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D75E87-C878-4485-8FC5-E4BD7A2F0BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D75E87-C878-4485-8FC5-E4BD7A2F0BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D75E87-C878-4485-8FC5-E4BD7A2F0BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D75E87-C878-4485-8FC5-E4BD7A2F0BBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("L01E01.ServiceHost")]
+[assembly: AssemblyTitle("L02E01.EvalServiceLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("L01E01.ServiceHost")]
+[assembly: AssemblyProduct("L02E01.EvalServiceLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7076e30c-89e7-4ea0-8cf2-4babc4038930")]
+[assembly: Guid("e5d75e87-c878-4485-8fc5-e4bd7a2f0bbc")]
 
 // Version information for an assembly consists of the following four values:
 //
