@@ -31,16 +31,24 @@ namespace L02E01.ConsoleHost
                     TimeSent = DateTime.Now,
                     Comments = "Hello World",
                 };
+                Eval eval2 = new Eval()
+                {
+                    Submitter = "jon jonsson",
+                    TimeSent = DateTime.Now,
+                    Comments = "Hello Universe",
+                };
 
                 evalService.SubmitEval(eval);
+                evalService.SubmitEval(eval2);
+
 
                 List<Eval> myEvals = evalService.GetEvals();
 
                 foreach (var e in myEvals)
                 {
-                    Console.WriteLine("submitter: "+e.Submitter+"\n");
-                    Console.WriteLine("comment: "+e.Comments+"\n");
-                    Console.WriteLine("timesent: "+e.TimeSent+"\n");
+                    Console.WriteLine("Submitter: "+e.Submitter);
+                    Console.WriteLine("Comment: "+e.Comments);
+                    Console.WriteLine("TimeSent: "+e.TimeSent+"\n");
                 }
 
                 host.Close();
