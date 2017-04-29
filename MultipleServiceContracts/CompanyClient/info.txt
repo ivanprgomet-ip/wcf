@@ -1,0 +1,7 @@
+﻿this company client project is normaly a completely separated project 
+that comunicates with the service 
+
+* client endpoints in the webconfig file auto generated
+
+1. run the companyservicehost (as ADMINISTATOR) to start the service up and make it available for consumers
+2. run the companyclient to consume the upp and running service 

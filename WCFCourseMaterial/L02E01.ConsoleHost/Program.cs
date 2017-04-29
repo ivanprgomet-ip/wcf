@@ -5,6 +5,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using L02E01.EvalServiceLibrary;
+using System.ServiceModel.Description;
 
 namespace L02E01.ConsoleHost
 {
@@ -22,6 +23,14 @@ namespace L02E01.ConsoleHost
             try
             {
                 host.Open();
+                #region service info
+                Console.WriteLine($"{host.Description.ServiceType} is up and running with these endpoints:\n");
+                foreach (ServiceEndpoint se in host.Description.Endpoints)
+                {
+                    Console.WriteLine(se.Address);
+                }
+                Console.WriteLine();
+                #endregion
 
                 EvalService evalService = new EvalService();
 
@@ -53,8 +62,9 @@ namespace L02E01.ConsoleHost
 
                 host.Close();
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 host.Abort();
             }
         }
