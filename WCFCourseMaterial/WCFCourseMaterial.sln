@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03E01.ConsoleClient", "L03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03E02.WinFormClient", "L03E02.WinFormClient\L03E02.WinFormClient.csproj", "{D9E25434-75F3-4538-AF21-29E704CDDF47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03E03.SveaRiksbank.ConsoleClient", "L03E03.SveaRiksbank.ConsoleClient\L03E03.SveaRiksbank.ConsoleClient.csproj", "{B78495B0-83B0-4E97-BA0B-2C1D17919011}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{D9E25434-75F3-4538-AF21-29E704CDDF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9E25434-75F3-4538-AF21-29E704CDDF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9E25434-75F3-4538-AF21-29E704CDDF47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
