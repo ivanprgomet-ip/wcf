@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03E02.WinFormClient", "L03
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03E03.SveaRiksbank.ConsoleClient", "L03E03.SveaRiksbank.ConsoleClient\L03E03.SveaRiksbank.ConsoleClient.csproj", "{B78495B0-83B0-4E97-BA0B-2C1D17919011}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E01.ProductsApp.WebApi", "L04E01.ProductsApp.WebApi\L04E01.ProductsApp.WebApi.csproj", "{63906788-4CF2-406F-A22E-EB19D3EDDCDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B78495B0-83B0-4E97-BA0B-2C1D17919011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
