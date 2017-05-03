@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace L04E02.Books.WebApi
+namespace L04E02.BookLibrary.WebApi
 {
     public static class WebApiConfig
     {

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("L04E02.Books.WebApi")]
+[assembly: AssemblyTitle("L04E02.BookLibrary.WebApi")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("L04E02.Books.WebApi")]
+[assembly: AssemblyProduct("L04E02.BookLibrary.WebApi")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("af15c0d7-4563-43ef-8ac4-af36f245d952")]
+[assembly: Guid("664c982d-7a4d-4b3d-bc24-174501c5ad0a")]
 
 // Version information for an assembly consists of the following four values:
 //

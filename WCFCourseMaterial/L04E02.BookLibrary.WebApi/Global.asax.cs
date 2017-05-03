@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace L04E02.Books.WebApi
+namespace L04E02.BookLibrary.WebApi
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
