@@ -34,8 +34,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03E03.SveaRiksbank.Console
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E01.ProductsApp.WebApi", "L04E01.ProductsApp.WebApi\L04E01.ProductsApp.WebApi.csproj", "{63906788-4CF2-406F-A22E-EB19D3EDDCDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E02.Books.WebApi", "L04E02.Books.WebApi\L04E02.Books.WebApi.csproj", "{AF15C0D7-4563-43EF-8AC4-AF36F245D952}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,10 +84,6 @@ Global
 		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63906788-4CF2-406F-A22E-EB19D3EDDCDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF15C0D7-4563-43EF-8AC4-AF36F245D952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF15C0D7-4563-43EF-8AC4-AF36F245D952}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF15C0D7-4563-43EF-8AC4-AF36F245D952}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF15C0D7-4563-43EF-8AC4-AF36F245D952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
