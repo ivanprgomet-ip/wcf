@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PersonService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersonService_EditFirstname_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditFirstname" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditFirstname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditFirstnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditLastname_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditLastname" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditLastname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditLastnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPhone" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_EditPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetFullname_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullname" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetFullname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPersonService_GetAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAddressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPersonService">
+    <wsdl:operation name="EditFirstname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/EditFirstname" message="tns:IPersonService_EditFirstname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/EditFirstnameResponse" message="tns:IPersonService_EditFirstname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditLastname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/EditLastname" message="tns:IPersonService_EditLastname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/EditLastnameResponse" message="tns:IPersonService_EditLastname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/EditAddress" message="tns:IPersonService_EditAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/EditAddressResponse" message="tns:IPersonService_EditAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/EditPhone" message="tns:IPersonService_EditPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/EditPhoneResponse" message="tns:IPersonService_EditPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetFullname" message="tns:IPersonService_GetFullname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetFullnameResponse" message="tns:IPersonService_GetFullname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersonService/GetAddress" message="tns:IPersonService_GetAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersonService/GetAddressResponse" message="tns:IPersonService_GetAddress_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPersonService" type="tns:IPersonService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EditFirstname">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/EditFirstname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLastname">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/EditLastname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAddress">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/EditAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPhone">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/EditPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullname">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetFullname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAddress">
+      <soap:operation soapAction="http://tempuri.org/IPersonService/GetAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonService">
+    <wsdl:port name="BasicHttpBinding_IPersonService" binding="tns:BasicHttpBinding_IPersonService">
+      <soap:address location="http://localhost:8080/person/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
