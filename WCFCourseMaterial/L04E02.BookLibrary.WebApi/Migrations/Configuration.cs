@@ -10,6 +10,7 @@ namespace L04E02.BookLibrary.WebApi.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(L04E02.BookLibrary.WebApi.Models.LibraryEntities context)

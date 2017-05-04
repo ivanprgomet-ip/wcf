@@ -13,6 +13,6 @@ namespace L04E02.BookLibrary.WebApi.Models
         public int BookId { get; set; }
         public string Title { get; set; }
         public string ISBN { get; set; }
-        public virtual List<Author> Authors { get; set; }
+        public virtual IList<Author> Authors { get; set; }
     }
 }
