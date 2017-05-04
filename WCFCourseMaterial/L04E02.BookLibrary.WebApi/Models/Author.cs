@@ -14,6 +14,6 @@ namespace L04E02.BookLibrary.WebApi.Models
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         
-        public List<Book> Titles { get; set; }
+        public virtual List<Book> Titles { get; set; }
     }
 }
