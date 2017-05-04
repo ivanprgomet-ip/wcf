@@ -6,13 +6,15 @@ using System.Web;
 
 namespace L04E02.BookLibrary.WebApi.Models
 {
-    [Serializable]
-    [DataContract(IsReference = true)]
+    //[Serializable]
+    //[DataContract(IsReference = true)]
     public class Book
     {
         public int BookId { get; set; }
         public string Title { get; set; }
         public string ISBN { get; set; }
-        public virtual IList<Author> Authors { get; set; }
+        public Author Author { get; set; }
+        public int AuthorId { get; set; }
+        //public virtual IList<Author> Authors { get; set; }
     }
 }

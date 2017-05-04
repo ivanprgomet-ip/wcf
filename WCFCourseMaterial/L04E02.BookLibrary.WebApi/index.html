@@ -9,10 +9,10 @@
         <h2>all authors</h2>
         <ul id="authors" />
     </div>
-    <!--<div>
+    <div>
         <h2>all books</h2>
         <ul id="books" />
-    </div>-->
+    </div>
 
     <script src="http://ajax.aspnetcdn.com/ajax/JQuery/jquery-2.0.3.min.js"></script>
     <script>
@@ -27,11 +27,25 @@
                         $('#authors').append('<li>' + formatItem(item))
                     });
                 });
+
+            $.getJSON(uri + '/books/')
+          .done(function (data) {
+              console.log(data);
+              $.each(data, function (key, item) {
+                  console.log(item);
+                  $('#books').append('<li>' + formatBookItem(item))
+              });
+          });
+
         });
 
         function formatItem(item) {
             return item.Firstname + ' ' + item.Lastname;
         };
+        function formatBookItem(item) {
+            return item.Title + ' ' + item.ISBN + ' (' + item.Author.Firstname + item.Author.Lastname + ')';
+        };
+
     </script>
 </body>
 </html>
