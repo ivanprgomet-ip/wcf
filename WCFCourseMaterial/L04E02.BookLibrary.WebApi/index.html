@@ -22,6 +22,34 @@
         </div>
     </div>
 
+
+
+    <div>
+        <br />
+        <h2>Add new author</h2>
+        <input type="text" id="authorFirstname" placeholder="enter firstname" />
+        <br />
+        <input type="text" id="authorLastname" placeholder="enter lastname" />
+        <br />
+        <button onclick="Search(document.getElementById('search').value)">Search</button>
+    </div>
+    <div>
+        <br />
+        <h2>Add new book</h2>
+        <input type="text" id="bookTitle" placeholder="enter title" />
+        <br />
+        <input type="text" id="bookISBN" placeholder="enter ISBN" />
+        <br />
+        <label>author id:
+        <select id="authorIds">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        </label>
+        <br />
+        <button onclick="Search(document.getElementById('search').value)">Search</button>
+    </div>
+
     <script src="http://ajax.aspnetcdn.com/ajax/JQuery/jquery-2.0.3.min.js"></script>
     <script>
         // initial load of all books and all authors
