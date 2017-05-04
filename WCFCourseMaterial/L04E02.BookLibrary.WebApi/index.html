@@ -14,10 +14,14 @@
         <ul id="books" />
     </div>
 
+    <div>
+        <input type="text" id="search" placeholder="Dont be shy.." />
+        <button onclick="Search(document.getElementById('search').value)">Search</button>
+    </div>
+
     <script src="http://ajax.aspnetcdn.com/ajax/JQuery/jquery-2.0.3.min.js"></script>
     <script>
         var uri = 'api/library'
-
         $(document).ready(function () {
             $.getJSON(uri + '/authors/')
                 .done(function (data) {
@@ -45,6 +49,7 @@
         function formatBookItem(item) {
             return item.Title + ' ' + item.ISBN + ' (' + item.Author.Firstname + item.Author.Lastname + ')';
         };
+
 
     </script>
 </body>
