@@ -17,26 +17,26 @@
     <div>
         <input type="text" id="search" placeholder="Dont be shy.." />
         <button onclick="Search(document.getElementById('search').value)">Search</button>
+        <div id="searchResults">
+
+        </div>
     </div>
 
     <script src="http://ajax.aspnetcdn.com/ajax/JQuery/jquery-2.0.3.min.js"></script>
     <script>
+        // initial load of all books and all authors
         var uri = 'api/library'
         $(document).ready(function () {
             $.getJSON(uri + '/authors/')
                 .done(function (data) {
-                    console.log(data);
                     $.each(data, function (key, item) {
-                        console.log(item);
                         $('#authors').append('<li>' + formatItem(item))
                     });
                 });
 
             $.getJSON(uri + '/books/')
           .done(function (data) {
-              console.log(data);
               $.each(data, function (key, item) {
-                  console.log(item);
                   $('#books').append('<li>' + formatBookItem(item))
               });
           });
@@ -50,7 +50,32 @@
             return item.Title + ' ' + item.ISBN + ' (' + item.Author.Firstname + item.Author.Lastname + ')';
         };
 
+        // search functionality
+        function Search(searchTerm) {
 
+            // clear old search results
+            $('#searchResults').html('');
+
+            // append new search results
+            $.getJSON(uri + '/authors/')
+               .done(function (data) {
+                   $.each(data, function (key, item) {
+                       if (item.Firstname == searchTerm || item.Lastname == searchTerm || item.AuthorId == searchTerm) {
+                           $('#searchResults').append('<p>' + item.Firstname + ' ' + item.Lastname + '</p>')
+                       }
+                   });
+               });
+
+            $.getJSON(uri + '/books/')
+              .done(function (data) {
+                  $.each(data, function (key, item) {
+                      if (item.Title == searchTerm || item.ISBN == searchTerm || item.BookId == searchTerm) {
+                          $('#searchResults').append('<p>' + item.Title + ' ' + item.ISBN + ' (' + item.Author.Firstname + item.Author.Lastname + ')' + '</p>')
+                      }
+                  });
+              });
+
+        }
     </script>
 </body>
 </html>
