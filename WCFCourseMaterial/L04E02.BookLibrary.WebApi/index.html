@@ -22,8 +22,6 @@
         </div>
     </div>
 
-
-
     <div>
         <br />
         <h2>Add new author</h2>
@@ -31,8 +29,9 @@
         <br />
         <input type="text" id="authorLastname" placeholder="enter lastname" />
         <br />
-        <button onclick="Search(document.getElementById('search').value)">Search</button>
+        <button onclick="AddAuthor()">Save</button>
     </div>
+
     <div>
         <br />
         <h2>Add new book</h2>
@@ -40,14 +39,19 @@
         <br />
         <input type="text" id="bookISBN" placeholder="enter ISBN" />
         <br />
-        <label>author id:
-        <select id="authorIds">
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
+        <label>
+            author id:
+            <select id="authorIds">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
         </label>
         <br />
         <button onclick="Search(document.getElementById('search').value)">Search</button>
+    </div>
+
+    <div id="msg" style="color:forestgreen; font-weight:bold;">
+
     </div>
 
     <script src="http://ajax.aspnetcdn.com/ajax/JQuery/jquery-2.0.3.min.js"></script>
@@ -78,7 +82,7 @@
             return item.Title + ' ' + item.ISBN + ' (' + item.Author.Firstname + item.Author.Lastname + ')';
         };
 
-        // search functionality
+        // SEARCH functionality
         function Search(searchTerm) {
 
             // clear old search results
@@ -102,6 +106,21 @@
                       }
                   });
               });
+
+        }
+
+        // ADD functionality
+        function AddAuthor() {
+            var firstname = $("#authorFirstname").val();
+            var lastname = $("#authorLastname").val();
+
+            $.getJSON(uri + '/addauthor/' + firstname + '/' + lastname)
+             .done(function (data) {
+
+                 $('#msg').html('');//first clear old message
+                 $('#msg').append('<p>Done!</p>'); // then add new message
+
+             })
 
         }
     </script>
