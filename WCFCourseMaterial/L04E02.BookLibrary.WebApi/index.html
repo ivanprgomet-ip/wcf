@@ -47,7 +47,7 @@
             </select>
         </label>
         <br />
-        <button onclick="Search(document.getElementById('search').value)">Search</button>
+        <button onclick="AddBook()">Save</button>
     </div>
 
     <div id="msg" style="color:forestgreen; font-weight:bold;">
@@ -62,14 +62,15 @@
             $.getJSON(uri + '/authors/')
                 .done(function (data) {
                     $.each(data, function (key, item) {
-                        $('#authors').append('<li>' + formatItem(item))
+                        $('#authors').append('<li>' + formatItem(item) + '<button id="' + item.AuthorId + '" onclick="DeleteAuthor(' + item.AuthorId + ')" >Delete</button>')
                     });
                 });
 
             $.getJSON(uri + '/books/')
           .done(function (data) {
               $.each(data, function (key, item) {
-                  $('#books').append('<li>' + formatBookItem(item))
+                  $('#books').append('<li>' + formatBookItem(item) + '<button id="' + item.BookId + '" onclick="DeleteBook(' + item.BookId + ')" >Delete</button>')
+
               });
           });
 
@@ -116,13 +117,50 @@
 
             $.getJSON(uri + '/addauthor/' + firstname + '/' + lastname)
              .done(function (data) {
-
-                 $('#msg').html('');//first clear old message
-                 $('#msg').append('<p>Done!</p>'); // then add new message
-
-             })
-
+                 console.log(data);
+                 alert("author added");
+             }).fail(function (resp) {
+                 console.log(response);
+                 alert("some wnet wrong");
+             });
         }
+
+        function AddBook() {
+            var title = $("#bookTitle").val();
+            var ISBN = $("#bookISBN").val();
+            var authorId = $("#authorIds").val(); // gets the value that's selected
+            //var authorId = $("#authorIds option:selected").text(); gets the string selected isntead
+
+            $.getJSON(uri + '/addbook/' + title + '/' + ISBN + '/' + authorId)
+             .done(function (data) {
+                 // why not reaching this part?
+                 console.log(data);
+                 alert("book added");
+             }).fail(function (response) {
+                 console.log(response);
+                 alert("sonme whet wrong");
+             })
+        }
+
+        // DELETE functionality
+        function DeleteAuthor(authorid) {
+            $.getJSON(uri + '/deleteauthor/' + authorid)
+               .done(function (data) {
+                   $.each(data, function (key, item) {
+                       //dosome
+                   });
+               });
+        }
+
+        function DeleteBook(bookid) {
+            $.getJSON(uri + '/deletebook/' + bookid)
+               .done(function (data) {
+                   $.each(data, function (key, item) {
+                       //dosome
+                   });
+               });
+        }
+
     </script>
 </body>
 </html>
