@@ -70,10 +70,8 @@
           .done(function (data) {
               $.each(data, function (key, item) {
                   $('#books').append('<li>' + formatBookItem(item) + '<button id="' + item.BookId + '" onclick="DeleteBook(' + item.BookId + ')" >Delete</button>')
-
               });
           });
-
         });
 
         function formatItem(item) {
