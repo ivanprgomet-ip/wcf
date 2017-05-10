@@ -6,37 +6,70 @@
 </head>
 <body>
 
-    <div>
-        <h2>All Authors</h2>
-        <ul id="authors" />
-    </div>
+    <section style="border:1px solid gray;padding:5px;">
 
-    <div>
-        <h2>Search by author id</h2>
-        <input type="text" id="authorid" placeholder="authorid"/>
-        <input type="button" value="Search" onclick="FindAuthor();" />
-        <p id="searchResult">
-        </p>
-    </div>
+        <div>
+            <h2>All Authors</h2>
+            <ul id="authors" />
+        </div>
 
-    <div>
-        <h2>Create new author</h2>
-        <input type="text" id="fname" placeholder="firstname" />
-        <input type="text" id="lname" placeholder="lastname" />
-        <input type="text" id="phone" placeholder="phone" />
+        <div>
+            <h2>Search by author id</h2>
+            <input type="text" id="authorid" placeholder="authorid" />
+            <input type="button" value="Search" onclick="FindAuthor();" />
+            <p id="searchResult">
+            </p>
+        </div>
 
-        <button onclick="AddAuthor();">Add and Save</button>
-    </div>
+        <div>
+            <h2>Create new author</h2>
+            <input type="text" id="fname" placeholder="firstname" />
+            <input type="text" id="lname" placeholder="lastname" />
+            <input type="text" id="phone" placeholder="phone" />
 
-
-    <div>
-        <h2>Remove by author id</h2>
-        <input type="text" id="deleteid" placeholder="authorid"/>
-        <button onclick="RemoveAuthor();">Remove and Save</button>
-    </div>
+            <button onclick="AddAuthor();">Add and Save</button>
+        </div>
 
 
+        <div>
+            <h2>Remove by author id</h2>
+            <input type="text" id="deleteid" placeholder="authorid" />
+            <button onclick="RemoveAuthor();">Remove and Save</button>
+        </div>
+    </section>
+
+    <section style="border:1px solid gray;padding:5px;">
+
+        <div>
+            <h2>All Titles</h2>
+            <ul id="titles" />
+        </div>
+
+        <div>
+            <h2>Search by ISBN</h2>
+            <input type="text" id="titleid" placeholder="titleid" />
+            <input type="button" value="Search" onclick="FindTitle();" />
+            <p id="titleSearchResult">
+            </p>
+        </div>
+
+        <div>
+            <h2>Create new title</h2>
+            <input type="text" id="isbn" placeholder="enter unique isbn" />
+            <input type="text" id="title" placeholder="enter titlte" />
+
+            <button onclick="AddTitle();">Add and Save</button>
+        </div>
+
+
+        <div>
+            <h2>Remove by ISBN</h2>
+            <input type="text" id="deletetitleid" placeholder="titleid" />
+            <button onclick="RemoveTitle();">Remove and Save</button>
+        </div>
+    </section>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <!-- authors -->
     <script>
         var authorURI = "api/authors";
         $(document).ready(function () {
@@ -48,7 +81,7 @@
             .done(function (data) {
                 $('#authors').html("");
                 $.each(data, function (key, item) {
-                    $('<li>', { text: formatTitle(item) }).appendTo('#authors');
+                    $('<li>', { text: formatAuthor(item) }).appendTo('#authors');
                 });
             });
         };
@@ -58,7 +91,7 @@
             $.getJSON(authorURI + "?id=" + id).
             done(function (data) {
                 console.log(data);
-                $('#searchResult').text(formatTitle(data));
+                $('#searchResult').text(formatAuthor(data));
             })
             .fail(function (jqXHR, textStatus, err) {
                 $('#searchResult').text("Error " + err);
@@ -103,8 +136,79 @@
 
         };
 
-        function formatTitle(item) {
+        function formatAuthor(item) {
             return item.AuthorID + '# ' + item.FirstName + " " + item.LastName + ' (' + item.HomeTel + ')';
+        }
+
+    </script>
+
+    <!-- titles -->
+    <script>
+        var titleURI = "api/titles";
+        $(document).ready(function () {
+            getTitles();
+        });
+
+        function getTitles() {
+            $.getJSON(titleURI)
+            .done(function (data) {
+                $('#titles').html("");
+                $.each(data, function (key, item) {
+                    $('<li>', { text: formatTitle(item) }).appendTo('#titles');
+                });
+            });
+        };
+
+        function FindTitle() {
+            var id = $('#titleid').val();
+            $.getJSON(titleURI + "?id=" + id).
+            done(function (data) {
+                console.log(data);
+                $('#titleSearchResult').text(formatTitle(data));
+            })
+            .fail(function (jqXHR, textStatus, err) {
+                $('#titleSearchResult').text("Error " + err);
+            });
+        }
+
+        function RemoveTitle() {
+            var deleteid = $('#deletetitleid').val();
+
+            $.ajax({
+                type: "DELETE",
+                url: titleURI + "/" + deleteid,
+                success: function () {
+                    alert("title has been deleted!");
+                    getTitles();
+                }
+            });
+        }
+
+        function AddTitle() {
+            var isbn= $('#isbn').val();
+
+            var title= $('#title').val();
+
+            var newTitleObject = {
+                ISBN: isbn,
+                Title1: title,
+            };
+
+            $.ajax({
+                type: "POST",
+                url: titleURI,
+                data: newTitleObject,
+                success: function () {
+                    alert("title has been added");
+                    getTitles();
+                }
+
+            });
+
+        };
+
+        function formatTitle(item) {
+            return item.ISBN+ '# ' + item.Title1;
         }
 
     </script>
