@@ -12,31 +12,41 @@ namespace L04E03.RESTfullExercise.EvalServiceLibrary
     public class EvalService : IEvalService
     {
         static List<Eval> evals = new List<Eval>();
+        static int evalCount = 0;
 
         public Eval GetEval(string id)
         {
-            throw new NotImplementedException();
+            return evals.Where(e => e.Id == id).FirstOrDefault();
         }
 
         public List<Eval> GetEvals()
         {
-            return evals;
+            return GetEvalsBySybmitter(null);
         }
 
         public List<Eval> GetEvalsBySybmitter(string submitter)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(submitter))
+                return evals;
+            else
+                return evals.Where(e => e.Submitter == submitter).ToList();
         }
 
-        public void RemoveEval()
+        public void RemoveEval(string id)
         {
-            throw new NotImplementedException();
+            Eval evalToRemove = evals.Find(e => e.Id == id);
+
+            evals.Remove(evalToRemove);
         }
 
         public void SubmitEval(Eval eval)
         {
             if (eval != null)
+            {
+                eval.Id = (evalCount += 1).ToString();
+
                 evals.Add(eval);
+            }
             else
                 Console.WriteLine("eval object is null");
         }
@@ -59,7 +69,7 @@ namespace L04E03.RESTfullExercise.EvalServiceLibrary
         List<Eval> GetEvalsBySybmitter(string submitter);
         [OperationContract]
         [WebInvoke(Method ="DELETE",UriTemplate ="eval/{id}")]
-        void RemoveEval();
+        void RemoveEval(string id);
     }
 
     [DataContract(Namespace = "http://localhost:8080/evals")]
