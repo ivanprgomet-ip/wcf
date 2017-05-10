@@ -91,7 +91,7 @@
             };
 
             $.ajax({
-                type: "POST",
+                type: "POST", // this is how it understands to post to the PostAuthor action method, and pass the data as the argument(s)
                 url: authorURI,
                 data: newAuthorObject,
                 success: function () {
