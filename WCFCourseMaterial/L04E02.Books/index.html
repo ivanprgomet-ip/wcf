@@ -25,14 +25,14 @@
         <input type="text" id="lname" placeholder="lastname" />
         <input type="text" id="phone" placeholder="phone" />
 
-        <button onclick="AddAuthor();">Remove</button>
+        <button onclick="AddAuthor();">Add and Save</button>
     </div>
 
 
     <div>
         <h2>Remove by author id</h2>
         <input type="text" id="deleteid" placeholder="authorid"/>
-        <button onclick="RemoveAuthor();">Remove</button>
+        <button onclick="RemoveAuthor();">Remove and Save</button>
     </div>
 
 
@@ -104,7 +104,7 @@
         };
 
         function formatTitle(item) {
-            return item.AuthorID + '# ' + item.FirstName + " " + item.LastName;
+            return item.AuthorID + '# ' + item.FirstName + " " + item.LastName + ' (' + item.HomeTel + ')';
         }
 
     </script>
