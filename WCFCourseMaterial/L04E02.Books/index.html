@@ -19,6 +19,15 @@
         </p>
     </div>
 
+    <div>
+        <h2>Create new author</h2>
+        <input type="text" id="fname" placeholder="firstname" />
+        <input type="text" id="lname" placeholder="lastname" />
+        <input type="text" id="phone" placeholder="phone" />
+
+        <button onclick="AddAuthor();">Remove</button>
+    </div>
+
 
     <div>
         <h2>Remove by author id</h2>
@@ -68,6 +77,31 @@
                 }
             });
         }
+
+        function AddAuthor() {
+
+            var fname = $('#fname').val();
+            var lname = $('#lname').val();
+            var phone = $('#phone').val();
+
+            var newAuthorObject = {
+                FirstName: fname,
+                LastName: lname,
+                HomeTel: phone
+            };
+
+            $.ajax({
+                type: "POST",
+                url: authorURI,
+                data: newAuthorObject,
+                success: function () {
+                    alert("author has been added");
+                    getAuthors();
+                }
+
+            });
+
+        };
 
         function formatTitle(item) {
             return item.AuthorID + '# ' + item.FirstName + " " + item.LastName;
