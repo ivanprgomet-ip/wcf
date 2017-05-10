@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E03.RESTfullExercise.Eva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E03.RESTfullExercise.ConsoleHost", "L04E03.RESTfullExercise.ConsoleHost\L04E03.RESTfullExercise.ConsoleHost.csproj", "{B87EAB6D-ED0B-454F-9ED2-B507480C003C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E03.RESTfullExercise.ConsoleClient", "L04E03.RESTfullExercise.ConsoleClient\L04E03.RESTfullExercise.ConsoleClient.csproj", "{D849A0EE-E3EC-45DF-B7D3-C69280180E55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,10 @@ Global
 		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D849A0EE-E3EC-45DF-B7D3-C69280180E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D849A0EE-E3EC-45DF-B7D3-C69280180E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D849A0EE-E3EC-45DF-B7D3-C69280180E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D849A0EE-E3EC-45DF-B7D3-C69280180E55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
