@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E02.Books", "L04E02.Book
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E03.RESTfullExercise.EvalServiceLibrary", "L04E03.RESTfullExercise.EvalServiceLibrary\L04E03.RESTfullExercise.EvalServiceLibrary.csproj", "{5B5F1CF7-6015-476C-8E3E-57B83FB4DC1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04E03.RESTfullExercise.ConsoleHost", "L04E03.RESTfullExercise.ConsoleHost\L04E03.RESTfullExercise.ConsoleHost.csproj", "{B87EAB6D-ED0B-454F-9ED2-B507480C003C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +104,10 @@ Global
 		{5B5F1CF7-6015-476C-8E3E-57B83FB4DC1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B5F1CF7-6015-476C-8E3E-57B83FB4DC1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B5F1CF7-6015-476C-8E3E-57B83FB4DC1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B87EAB6D-ED0B-454F-9ED2-B507480C003C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
