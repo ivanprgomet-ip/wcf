@@ -17,7 +17,6 @@ namespace L04E03.RESTfullExercise.ConsoleClient
 
             IEvalService client = cf.CreateChannel();
 
-
             while (true)
             {
                 Console.WriteLine("Enter a commando >> ");
@@ -26,16 +25,30 @@ namespace L04E03.RESTfullExercise.ConsoleClient
                 switch (comm)
                 {
                     case "submit":
+                        // getting all the required fields for the new eval to create
+                        Console.WriteLine("Who is the subbmitter? >> ");
+                        string submter = Console.ReadLine();
+
+                        Console.WriteLine("enter comments in one string >> ");
+                        string comments = Console.ReadLine();
+
+                        Console.WriteLine("Enter an unique id for the EVAL >> ");
+                        string id = Console.ReadLine();
+
+                        // creating the EVAL
                         Eval e = new Eval()
                         {
-                            Comments = "hahahahah",
-                            Submitter = "ivannooo",
+                            Comments = comments,
+                            Submitter = submter,
                             TimeSent = DateTime.Now,
-                            Id = "394853458",
+                            Id = id,
                         };
 
+                        // subbmitting the new eval
                         client.SubmitEval(e);
+
                         Console.WriteLine("Created!");
+
                         break;
                     case "get":
                         Console.WriteLine("enter a id");
@@ -63,6 +76,7 @@ namespace L04E03.RESTfullExercise.ConsoleClient
                 }
                 if (comm == "exit")
                     break;
+                Console.ReadKey();
             }
 
             Console.WriteLine("exiting program");
