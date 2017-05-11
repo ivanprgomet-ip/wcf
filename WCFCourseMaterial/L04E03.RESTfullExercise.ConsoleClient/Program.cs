@@ -77,7 +77,7 @@ namespace L04E03.RESTfullExercise.ConsoleClient
 
                         List<Eval> retrievedEvals = client.GetEvalsBySybmitter(submitterInput);
 
-                        if (retrievedEvals.Count != 0)
+                        if (retrievedEvals.Count != 0 || retrievedEvals == null)
                         {
                             foreach (var ev in retrievedEvals)
                             {

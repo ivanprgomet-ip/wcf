@@ -16,7 +16,7 @@ namespace L04E03.RESTfullExercise.EvalServiceLibrary
 
         public Eval GetEval(string id)
         {
-            return evals.Where(e => e.Id.ToString() == id.ToString()).FirstOrDefault();
+            return evals.Where(e => e.Id == id).FirstOrDefault();
         }
 
         public List<Eval> GetEvals()
