@@ -71,7 +71,7 @@ namespace L04E03.RESTfullExercise.ConsoleHost
             //} 
             #endregion
 
-            WebServiceHost host = new WebServiceHost(typeof(EvalService),);
+            WebServiceHost host = new WebServiceHost(typeof(EvalService));
 
             try
             {
