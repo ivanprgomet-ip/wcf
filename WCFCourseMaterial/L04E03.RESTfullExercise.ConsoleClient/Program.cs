@@ -19,6 +19,11 @@ namespace L04E03.RESTfullExercise.ConsoleClient
 
             while (true)
             {
+                Console.WriteLine("[submit]");
+                Console.WriteLine("[get]");
+                Console.WriteLine("[list]");
+                Console.WriteLine("[remove]");
+                Console.WriteLine("[exit]");
                 Console.WriteLine("Enter a commando >> ");
                 string comm = Console.ReadLine();
 
