@@ -76,6 +76,7 @@ namespace L04E03.RESTfullExercise.ConsoleHost
             try
             {
                 host.Open();
+                Console.WriteLine("Service is running...");
                 Console.ReadLine();
                 host.Close();
             }

@@ -13,7 +13,7 @@ namespace L04E03.RESTfullExercise.ConsoleClient
         static void Main(string[] args)
         {
             WebChannelFactory<IEvalService> cf = new WebChannelFactory<IEvalService>(
-                 new Uri("http://localhost:8080/evalservice"));
+                 new Uri("http://localhost:8089/evalservice"));
 
             IEvalService client = cf.CreateChannel();
 
@@ -60,14 +60,31 @@ namespace L04E03.RESTfullExercise.ConsoleClient
                         string input = Console.ReadLine();
 
                         Eval retrieved = client.GetEval(input);
-                        Console.WriteLine("Entered: ");
-                        Console.WriteLine(retrieved.Comments + ' ' + retrieved.Submitter);
+                        if (retrieved != null)
+                        {
+
+                            Console.WriteLine("Entered: ");
+                            Console.WriteLine(retrieved.Comments + ' ' + retrieved.Submitter);
+                        }
+                        else
+                        {
+                            Console.WriteLine("No Eval matching id: " + input);
+                        }
                         break;
                     case "list":
                         Console.WriteLine("Enter a subbmitter >>");
                         string submitterInput = Console.ReadLine();
 
-                        client.GetEvalsBySybmitter(submitterInput);
+                        List<Eval> retrievedEvals = client.GetEvalsBySybmitter(submitterInput);
+
+                        if (retrievedEvals.Count != 0)
+                        {
+                            foreach (var ev in retrievedEvals)
+                            {
+                                Console.WriteLine(ev.Submitter + " " + ev.Comments);
+                                Console.WriteLine("------------");
+                            }
+                        }
 
                         break;
                     case "remove":
