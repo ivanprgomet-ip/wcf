@@ -42,6 +42,7 @@ namespace ServiceLibrary
     {
         [OperationContract]
         void SubmitEval(Eval eval);
+        [OperationContract]
         List<Eval> GetEvals();
 
     }
