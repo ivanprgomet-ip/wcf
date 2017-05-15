@@ -10,6 +10,13 @@ namespace ConsoleHost
 {
     class Program
     {
+        /// <summary>
+        /// you only need to run this host, and will have access to the service via console interface.
+        /// no need to first start the servcelibrary before running this project, because this is a host,
+        /// not a client (which is a consumer and needs to have an upp and running servcie somewhere so taht
+        /// the client can consume it).
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
 
@@ -17,7 +24,7 @@ namespace ConsoleHost
 
             // CONFIGURE host before open(). so that the host can actually find the 
             // servicelibrary project and the service its supposed to consume!
-
+            host.AddServiceEndpoint(typeof(IEvalService), new BasicHttpBinding(), "Http://localhost:8080/evals/basic");
 
             try
             {
