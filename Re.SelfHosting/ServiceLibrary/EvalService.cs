@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ServiceLibrary
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    class EvalService : IEvalService
+    public class EvalService : IEvalService
     {
         List<Eval> evals = new List<Eval>();
         public List<Eval> GetEvals()
