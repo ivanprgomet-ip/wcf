@@ -22,9 +22,8 @@ namespace ConsoleHost
 
             ServiceHost host = new ServiceHost(typeof(EvalService));
 
-            // CONFIGURE host before open(). so that the host can actually find the 
-            // servicelibrary project and the service its supposed to consume!
-            host.AddServiceEndpoint(typeof(IEvalService), new BasicHttpBinding(), "Http://localhost:8080/evals/basic");
+            // CONFIGURATION in program instead off in the app.config
+            //host.AddServiceEndpoint(typeof(IEvalService), new BasicHttpBinding(), "Http://localhost:8080/evals/basic");
 
             try
             {
