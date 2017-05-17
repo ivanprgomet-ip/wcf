@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E02.MediaHost", "E02.MediaH
 		{40CA5746-1B7A-4C29-B559-621371418345} = {40CA5746-1B7A-4C29-B559-621371418345}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaClient", "MediaClient\MediaClient.csproj", "{9AF0113B-694E-4BE9-8850-4A6502EE8161}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{F211C36A-5881-40F0-B1FD-8576556DC28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F211C36A-5881-40F0-B1FD-8576556DC28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F211C36A-5881-40F0-B1FD-8576556DC28E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF0113B-694E-4BE9-8850-4A6502EE8161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF0113B-694E-4BE9-8850-4A6502EE8161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF0113B-694E-4BE9-8850-4A6502EE8161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF0113B-694E-4BE9-8850-4A6502EE8161}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

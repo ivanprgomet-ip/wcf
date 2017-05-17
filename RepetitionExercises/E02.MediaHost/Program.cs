@@ -18,12 +18,12 @@ namespace E02.MediaHost
             ///     basicHttpBinding
             ///     WsHttpBinding
             ///     netTcpBinding
+            
             ServiceHost host = new ServiceHost(typeof(MediaService));
             try
             {
                 host.Open();
 
-                // do stuff
                 Console.WriteLine("host {0}...", host.State);
                 Console.ReadLine();
 
