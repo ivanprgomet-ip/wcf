@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace E02.MyMediaServiceLibrary
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    class MediaService : IMediaService
+    public class MediaService : IMediaService
     {
         List<Book> books = new List<Book>();
         List<Paper> papers = new List<Paper>();

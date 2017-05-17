@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E02.MyMediaServiceLibrary;
+using System.ServiceModel;
 
 namespace E02.MediaHost
 {
@@ -11,14 +13,27 @@ namespace E02.MediaHost
         static void Main(string[] args)
         {
             /// [x] enable HTTP-get (see appconfig in MyMediaServiceLibrary)
-            /// [] set HTTP-get-url to http://localhost:8080/mediaService/meta
-            /// [] create bindings: 
+            /// [x] set HTTP-get-url to http://localhost:8080/mediaService/meta
+            /// [x] create bindings: 
             ///     basicHttpBinding
             ///     WsHttpBinding
             ///     netTcpBinding
+            ServiceHost host = new ServiceHost(typeof(MediaService));
+            try
+            {
+                host.Open();
 
-            ServiceReference.MediaServiceClient client = new ServiceReference.MediaServiceClient();
+                // do stuff
+                Console.WriteLine("host {0}...", host.State);
+                Console.ReadLine();
 
+                host.Close();
+            }
+            catch (Exception)
+            {
+                host.Abort();
+                throw;
+            }
         }
     }
 }
